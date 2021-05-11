@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CVsitesiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_ADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KULLANICIAD" Type="varchar" MaxLength="50" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_ADRES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TELEFON" Type="varchar" MaxLength="30" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="ADRES" Type="varchar" MaxLength="500" />
+    <Property Name="KONUM" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBL_ÇALIŞMALARIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADRES" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBL_HAKKIMDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BILGILER" Type="varchar" MaxLength="500" />
+    <Property Name="EGITIM" Type="varchar" MaxLength="500" />
+    <Property Name="ISDENEYIMLERI" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TBL_ILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADSOYAD" Type="varchar" MaxLength="100" />
+    <Property Name="MAIL" Type="varchar" MaxLength="100" />
+    <Property Name="MESAJ" Type="varchar(max)" />
+    <Property Name="KONU" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBL_YETENEKLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YETENEK" Type="varchar" MaxLength="500" />
+    <Property Name="DERECE" Type="int" />
+  </EntityType>
+  <EntityContainer Name="CVsitesiModelStoreContainer">
+    <EntitySet Name="TBL_ADMIN" EntityType="Self.TBL_ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ADRES" EntityType="Self.TBL_ADRES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ÇALIŞMALARIM" EntityType="Self.TBL_ÇALIŞMALARIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_HAKKIMDA" EntityType="Self.TBL_HAKKIMDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ILETISIM" EntityType="Self.TBL_ILETISIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_YETENEKLER" EntityType="Self.TBL_YETENEKLER" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
