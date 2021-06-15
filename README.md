@@ -7,7 +7,8 @@ A site designed using ASP.NET Web Forms that we can publish about your skills an
 
 The project will be updated.
 
-Not finished
+ <img src="https://i.hizliresim.com/d4i5kuz.gif" align="center" style="width: 60%" />
+
 
 
 */
